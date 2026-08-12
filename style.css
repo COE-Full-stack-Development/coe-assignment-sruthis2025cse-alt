@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(99, 102, 241, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.22), transparent 30%),
+    linear-gradient(135deg, #edf2ff 0%, #fdf2f8 100%);
+}
+
+#profile-card {
+  width: 390px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  border-radius: 24px;
+  padding: 28px 24px 20px;
+  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+#profile-card h2 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  color: #312e81;
+}
+
+#profile-card h3 {
+  margin: 22px 0 10px;
+  font-size: 1.05rem;
+  color: #4f46e5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#toggle-theme-btn,
+#add-skill-btn {
+  cursor: pointer;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+}
+
+#toggle-theme-btn:hover,
+#add-skill-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+#skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#skills-list li {
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  color: #312e81;
+  border-radius: 10px;
+  padding: 8px 12px;
+  border-left: 4px solid #8b5cf6;
+  font-weight: 600;
+}
+
+#profile-card > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#skill-input {
+  flex: 1;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  font-size: 0.95rem;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+#skill-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+#profile-card.dark-theme {
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.5);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+#profile-card.dark-theme h2,
+#profile-card.dark-theme h3 {
+  color: #f8fafc;
+}
+
+#profile-card.dark-theme #skills-list li {
+  background: rgba(30, 41, 59, 0.9);
+  color: #e2e8f0;
+  border-left-color: #38bdf8;
+}
+
+#profile-card.dark-theme #skill-input {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+#profile-card.dark-theme #skill-input::placeholder {
+  color: #94a3b8;
+}
+
+#profile-card.dark-theme #toggle-theme-btn,
+#profile-card.dark-theme #add-skill-btn {
+  background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+}
+
